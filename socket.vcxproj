@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="src\auxiliar.c" />
     <ClCompile Include="src\buffer.c" />
+    <ClCompile Include="src\compat.c" />
     <ClCompile Include="src\except.c" />
     <ClCompile Include="src\inet.c" />
     <ClCompile Include="src\io.c" />
@@ -123,6 +124,9 @@
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">copy %(FullPath) $(LUABIN_PATH)$(Configuration)\socket</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">copy %(FullPath) $(LUABIN_PATH)$(Configuration)\socket</Command>
     </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\compat.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{66E3CE14-884D-4AEA-9F20-15A0BEAF8C5A}</ProjectGuid>
